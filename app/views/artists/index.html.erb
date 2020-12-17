@@ -1,0 +1,13 @@
+<% @artists.each do |artist|%>
+<p>
+<%= link_to artist.name,artist_path(artist) %>
+<% "#{artist.song_count} song" %>
+<p><%= link_to artist.name, artist_path(artist) %> - <%= pluralize(artist.song_count, 'song') %></p>
+</p>
+<%end%>
+
+
+<%# 
+
+  index page lists the artists (FAILED - 3)
+  shows the song count for each artist (FAILED - 4) %>

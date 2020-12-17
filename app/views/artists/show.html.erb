@@ -1,0 +1,14 @@
+
+
+
+<%# 
+ show page links to the artist's songs by title (FAILED - 1)
+  lists all of the artist's songs (FAILED - 2) %>
+
+
+<h1><%= @artist.name %></h1>
+<ul>
+  <% @artist.songs.each do |song| %>
+    <%= link_to song.title, song_path(song) %>
+  <% end %>
+</ul>
